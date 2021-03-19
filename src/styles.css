@@ -1,0 +1,443 @@
+body,
+button,
+input {
+  color: #262626;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+/*======================== Navbar styles ========================*/
+
+.navbar {
+  border-bottom: 1px solid #d8cbcbb2;
+  background: white;
+
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.main-navbar {
+  width: 85%;
+  height: 55px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+  .main-navbar {
+    width: 100%;
+  }
+}
+.insta-image {
+  height: 60%;
+  width: 103px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.navbar-search,
+.navbar-logos {
+  margin-top: 0.5rem;
+}
+.navbar-logos {
+  display: inherit;
+  cursor: pointer;
+}
+.searchbar {
+  outline: none;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 3px;
+  background: #fafafa;
+  padding: 5px 15px 4px 10px;
+}
+.searchbar:placeholder-shown {
+  text-align: center;
+}
+.profile-img-ring {
+  border: 1px solid rgba(var(--i1d, 38, 38, 38), 1);
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  transform: translate(-10%, -10%);
+}
+.small-profile-img {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  position: relative;
+}
+
+@media screen and (max-width: 530px) {
+  .navbar-search {
+    display: none;
+  }
+}
+
+/*======================== Header styles ========================*/
+
+.main-profile {
+  background-color: #fafafa;
+  padding: 30px 20px 0;
+}
+.profile-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+}
+.list {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.list-items:first-child {
+  margin-left: 0;
+}
+.list-items {
+  font-size: 16px;
+  margin-right: 40px;
+}
+.profile-name h2 {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+}
+.upload-btn {
+  margin-left: 15px;
+}
+.profile-info-details {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.profile-img-area {
+  margin-left: -150px;
+  margin-right: 100px;
+  cursor: pointer;
+}
+.profile-area {
+  width: 80%;
+  margin: 0 auto;
+}
+.profile-img {
+  border-radius: 50%;
+}
+.profile-bio {
+  display: block;
+  font-size: 16px;
+}
+.profile-username {
+  display: inline;
+  font-weight: 600;
+  font-size: 16px;
+}
+span,
+a,
+p,
+h2 {
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.highlights-area {
+  margin-bottom: 44px;
+}
+.highlights {
+  height: 100%;
+  width: 100%;
+}
+.highlights-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.highlights-li {
+  cursor: pointer;
+  background: #fafafa;
+}
+.highlights-img img {
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+}
+.highlight-text {
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  font-weight: 600;
+  padding-top: 15px;
+}
+.profile-link {
+  display: block;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+.profile-desc-show {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top: 1px solid #dbdbdb;
+  padding: 12px 0;
+}
+.profile-desc {
+  font-size: 14px;
+  text-align: center;
+  width: 33.3%;
+}
+.profile-desc span {
+  text-align: center;
+  color: #8e8e8e;
+}
+.profile-desc span span {
+  display: block;
+  color: #8e8e8e;
+  color: black;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 736px) {
+  .highlights-ul {
+    /* justify-content: space-evenly; */
+    margin-left: -10px;
+  }
+  .highlights-li {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 736px) {
+  .highlights-ul {
+    justify-content: space-evenly;
+  }
+}
+
+/* This will apply above 736px */
+@media (min-width: 736px) {
+  .profile-header {
+    margin-bottom: 44px;
+  }
+  .profile-bio-show {
+    display: none;
+  }
+  .profile-desc-show {
+    display: none;
+  }
+}
+
+/* This will apply below 736px */
+@media screen and (max-width: 736px) {
+  .list {
+    display: none;
+  }
+  .profile-img {
+    height: 77px;
+    width: 77px;
+    position: absolute;
+    left: 15px;
+  }
+  .profile-header {
+    margin-left: 55px;
+    /* changed */
+    display: flex;
+    justify-content: left;
+  }
+  .profile-bio {
+    display: none;
+  }
+  .profile-bio-show {
+    display: block;
+  }
+  .upload-btn {
+    margin-left: 0;
+  }
+  .profile-info-details {
+    display: block;
+    /* margin-left: -100px; */
+  }
+  .highlights-area {
+    margin-top: 21px;
+    height: 88px;
+    margin-bottom: 21px;
+  }
+  .highlights {
+    height: 100%;
+    width: 100%;
+  }
+  .highlight-text {
+    padding-top: 0;
+    font-weight: normal;
+  }
+  .highlights-img img {
+    height: 56px;
+    width: 56px;
+  }
+  .highlights-li {
+    transform: translateX(0px);
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .profile-area {
+    width: 100%;
+  }
+  .profile-header {
+    margin-left: 70px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .profile-img-area {
+    margin-left: -65px;
+  }
+}
+
+/* @media screen and (max-width: 430px) {
+  .profile-header {
+    flex-direction: column;
+  }
+} */
+
+header {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border: 0 solid #000;
+  -webkit-box-sizing: border-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  /* position: relative; */
+}
+
+/*======================== Posts Header styles ========================*/
+
+.posts-header {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  border-top: 1px solid #dbdbdb;
+  color: #8e8e8e;
+  font-weight: 600;
+  font-size: 12px;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* apply above 736px */
+@media (min-width: 736px) {
+  .posts-header-links {
+    margin-right: 60px;
+    color: #262626;
+    margin-top: -1px;
+  }
+  .header-link {
+    border-top: 1px solid #262626;
+  }
+  .header-links-icons {
+    display: none;
+  }
+}
+/* apply below 736px */
+@media screen and (max-width: 736px) {
+  .links-posts {
+    display: none;
+  }
+  .header-links-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #dbdbdb;
+    justify-content: center;
+  }
+}
+.posts-header-links {
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+  color: #8e8e8e;
+  cursor: pointer;
+  height: 52px;
+  justify-content: center;
+}
+.posts-header-links span {
+  display: flex;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+.header-link,
+.header-link:visited {
+  color: black;
+}
+.header-svg {
+  display: block;
+  position: relative;
+}
+.header-svg-span {
+  margin-left: 6px;
+}
+
+@media (max-width: 735px) {
+  .posts-header-links {
+    display: flex;
+    flex: 1 1 auto;
+  }
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload,
+button {
+  border: none;
+  display: inline-block;
+  padding: 0px 24px;
+  cursor: pointer;
+  color: white;
+  background: #0095f6;
+  border-radius: 3px;
+  font-weight: 600;
+  outline: 0;
+}
+
+/*======================== Posts Styles ========================*/
+
+.postsImg {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+label.custom-file-upload {
+  height: 30px;
+  line-height: 30px;
+}
+button {
+  height: 30px;
+}
