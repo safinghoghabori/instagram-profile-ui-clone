@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import "../styles.css";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import '../styles.css';
+import axios from 'axios';
 
-import profileImg from "../images/ombre_profile_img.jpg";
-import highlights1 from "../images/highlights1.jpg";
-import highlights2 from "../images/highlights2.jpg";
-import highlights3 from "../images/highlights3.jpg";
-import highlights4 from "../images/highlights4.jpg";
+import profileImg from '../images/ombre_profile_img.jpg';
+import highlights1 from '../images/highlights1.jpg';
+import highlights2 from '../images/highlights2.jpg';
+import highlights3 from '../images/highlights3.jpg';
+import highlights4 from '../images/highlights4.jpg';
 
-import Grid from "@material-ui/core/Grid";
+import Grid from '@material-ui/core/Grid';
 
-import Posts from "../components/Posts";
+import Posts from '../components/Posts';
 
 function Header() {
   const [image, setImage] = useState(null);
@@ -27,21 +27,21 @@ function Header() {
     setData(false);
     if (image) {
       const formData = new FormData();
-      formData.append("instaImage", image);
+      formData.append('instaImage', image);
 
-      const res = await axios.post("http://localhost:5000/upload-image", formData, {
+      const res = await axios.post('/upload-image', formData, {
         headers: {
-          "Content-Type": "multipart/form-data",
-        },
+          'Content-Type': 'multipart/form-data'
+        }
       });
-      console.log("res...", res.data.msg);
+      console.log('res...', res.data.msg);
       setData(true);
     }
   };
 
   useEffect(() => {
     const getImages = async () => {
-      const imgUrls = await axios.get("http://localhost:5000/get-images");
+      const imgUrls = await axios.get('/get-images');
       setGetData(imgUrls.data);
 
       setPostCount(imgUrls.data.length);
@@ -67,10 +67,14 @@ function Header() {
                     <label for="file-upload" className="custom-file-upload">
                       Select file
                     </label>
-                    <input id="file-upload" type="file" onChange={handleImage} />
+                    <input
+                      id="file-upload"
+                      type="file"
+                      onChange={handleImage}
+                    />
                     &nbsp;&nbsp;
                     <button type="submit">Upload</button>
-                  </form>{" "}
+                  </form>{' '}
                 </div>
               </div>
               <ul className="list">
@@ -88,7 +92,7 @@ function Header() {
               <div className="profile-bio">
                 <h1 className="profile-username">Ombre | Hub for Live Music</h1>
                 <br />
-                <span style={{ color: "#8e8e8e" }}>App Page</span>
+                <span style={{ color: '#8e8e8e' }}>App Page</span>
                 <br />
                 <span className="text-span">
                   Sharing 𝐋𝐈𝐕𝐄 streaming music around the 🌎
@@ -116,7 +120,7 @@ function Header() {
           <div className="profile-bio-show">
             <h1 className="profile-username">Ombre | Hub for Live Music</h1>
             <br />
-            <span style={{ color: "#8e8e8e" }}>App Page</span>
+            <span style={{ color: '#8e8e8e' }}>App Page</span>
             <br />
             <span className="text-span">
               Sharing 𝐋𝐈𝐕𝐄 streaming music around the 🌎
@@ -146,9 +150,9 @@ function Header() {
                       height="87"
                       width="87"
                       style={{
-                        position: "absolute",
-                        width: "87px",
-                        height: "87px",
+                        position: 'absolute',
+                        width: '87px',
+                        height: '87px'
                       }}
                     ></canvas>
                   </div>
@@ -158,15 +162,15 @@ function Header() {
                   <div className="highlight-text">Reviews</div>
                 </li>
                 <li className="highlights-li">
-                  {" "}
+                  {' '}
                   <div className="canvas">
                     <canvas
                       height="87"
                       width="87"
                       style={{
-                        position: "absolute",
-                        width: "87px",
-                        height: "87px",
+                        position: 'absolute',
+                        width: '87px',
+                        height: '87px'
                       }}
                     ></canvas>
                   </div>
@@ -176,15 +180,15 @@ function Header() {
                   <div className="highlight-text">Campus</div>
                 </li>
                 <li className="highlights-li">
-                  {" "}
+                  {' '}
                   <div className="canvas">
                     <canvas
                       height="87"
                       width="87"
                       style={{
-                        position: "absolute",
-                        width: "87px",
-                        height: "87px",
+                        position: 'absolute',
+                        width: '87px',
+                        height: '87px'
                       }}
                     ></canvas>
                   </div>
@@ -194,15 +198,15 @@ function Header() {
                   <div className="highlight-text">Website</div>
                 </li>
                 <li className="highlights-li">
-                  {" "}
+                  {' '}
                   <div className="canvas">
                     <canvas
                       height="87"
                       width="87"
                       style={{
-                        position: "absolute",
-                        width: "87px",
-                        height: "87px",
+                        position: 'absolute',
+                        width: '87px',
+                        height: '87px'
                       }}
                     ></canvas>
                   </div>

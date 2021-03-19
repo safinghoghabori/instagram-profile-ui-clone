@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { Grid } from "@material-ui/core";
+import { Grid } from '@material-ui/core';
 
 function Posts(props) {
   const { _id, imageUrl } = props;
 
   //convert image url in proper formate
-  const imageUrlSplit = imageUrl.split("\\");
-  const finalImageUrl = `http://localhost:5000/${imageUrlSplit[0]}/${imageUrlSplit[1]}`;
+  const imageUrlSplit = imageUrl.split('\\');
+  const finalImageUrl = `/${imageUrlSplit[0]}/${imageUrlSplit[1]}`;
 
   return (
     <>
