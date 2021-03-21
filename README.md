@@ -1,11 +1,11 @@
-## instagram-profile-ui-clone
+## Instagram's profile UI clone
 
 
 ### Steps to run it in localhost:
 
 step1: Clone it
 
-step2: Run following commands,
+step2: Run the following commands,
 
 
 1. npm install
@@ -15,6 +15,6 @@ step2: Run following commands,
 3. npm start
 
 
-step3: Now you need to head over to the broser and type url http://localhost:5000/
+step3: Now you need to head over to the browser and type url http://localhost:5000/
 
 and there you go! 
